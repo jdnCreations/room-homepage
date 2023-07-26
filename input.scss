@@ -1,19 +1,171 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img, picture {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 $dark-gray: hsl(0, 0%, 63%);
+$black: hsl(0, 0%, 0%);
+$white: hsl(0, 0%, 100%);
+$very-dark-gray: hsl(0, 0%, 27%);
+$base-font-size: 12px;
+$font: 'League Spartan';
 
-// ### Primary
+body {
+  font-family: $font, sans-serif;
+}
 
-// - Dark Gray: hsl(0, 0%, 63%)
-// - Black: hsl(0, 0%, 0%)
-// - White: hsl(0, 0%, 100%)
-// - Very Dark Gray: hsl(0, 0%, 27%)
+p {
+  color: $dark-gray;
+}
 
-// ## Typography
+header {
+  background-image: url('./images/mobile-image-hero-1.jpg');
+  height: 360px;
+  max-width: 100vw;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
 
-// ### Body Copy
+}
 
-// - Font size: 12px
+nav {
+  width: 100%;
+  display: flex;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  align-items: center;
+  height: 110px;
+  color: $white;
+}
 
-// ### Font
+ul {
+  display: none;
+  visibility: hidden;
+  gap: 1rem;
+  text-transform: lowercase;
+  list-style: none;
+}
 
-// - Family: [League Spartan](https://fonts.google.com/specimen/League+Spartan)
-// - Weights: 500, 600, 700
+.brand {
+  width: 100%;
+  align-self: center;
+  text-align: center;
+  color: $white;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.hamburger {
+  position: absolute;
+  justify-self: start;
+}
+
+.slider-arrows {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  background-color: $black;
+  width: 112px;
+  height: 56px;
+  bottom: 0;
+  right: 0;
+
+  button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.slide {
+  padding: 2rem;
+
+  h1 {
+    font-size: 2.375rem;
+    letter-spacing: -0.08313rem;
+    line-height: 100%;
+    font-weight: 700;
+    padding-bottom: .875rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 135%;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    background-color: transparent;
+    border: none;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    
+    p {
+      font-size: 0.875rem;
+      text-transform: uppercase;
+      letter-spacing: 0.81375rem;
+      color: $black;
+      line-height: 0;
+      font-weight: 600;
+    }
+  }
+}
+
+.about {
+  div {
+    padding: 2rem;
+  }
+
+  h2 {
+    text-transform: uppercase;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.36313rem;
+    padding-bottom: 0.875rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 135%;
+  }
+
+  img {
+    width: 100%;
+  }
+}
