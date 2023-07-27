@@ -26,7 +26,7 @@ const slidePs = [
   `
 ];
 
-let currentSlide = 1;
+let currentSlide = 0;
 
 
 // sets the slide content based on the slide
