@@ -14,9 +14,14 @@ input, button, textarea, select {
 }
 
 body {
+  max-width: 1440px;
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
+}
+
+main {
+  max-width: 1440px;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -48,6 +53,18 @@ p {
   background-position: bottom;
   background-size: cover;
   position: relative;
+}
+
+.first[data-slide="0"] {
+  background-image: url("./images/mobile-image-hero-1.jpg");
+}
+
+.first[data-slide="1"] {
+  background-image: url("./images/mobile-image-hero-2.jpg");
+}
+
+.first[data-slide="2"] {
+  background-image: url("./images/mobile-image-hero-3.jpg");
 }
 
 nav {
@@ -185,13 +202,27 @@ ul {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-@media (min-width: 576px) {
-  .img {
-    max-height: 100%;
+@media (min-width: 1024px) {
+  .bottom {
+    align-items: flex-start;
+  }
+  .bottom img {
+    height: auto;
+    max-width: 100%;
+    object-fit: contain;
   }
   main {
     display: flex;
     flex-direction: column;
+  }
+  .first[data-slide="0"] {
+    background-image: url("./images/desktop-image-hero-1.jpg");
+  }
+  .first[data-slide="1"] {
+    background-image: url("./images//desktop-image-hero-2.jpg");
+  }
+  .first[data-slide="2"] {
+    background-image: url("./images/desktop-image-hero-3.jpg");
   }
   .first {
     background-image: url("./images/desktop-image-hero-1.jpg");
