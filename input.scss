@@ -117,11 +117,29 @@ nav {
 ul {
   display: flex;
   color: $black;
+  position: relative;
   // display: none;
   // visibility: hidden;
   gap: 1rem;
   text-transform: lowercase;
   list-style: none;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+li:hover:before {
+  align-self: center;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  border-bottom: 2px solid white;
+  width: 16px;
 }
 
 .brand {
@@ -143,7 +161,6 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
   background-color: $black;
   width: 112px;
   height: 56px;
@@ -151,11 +168,24 @@ ul {
   right: 0;
 
   button {
+    height: 100%;
+    width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: transparent;
     border: none;
     padding: 0;
     margin: 0;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: $very-dark-gray;
+  }
+
+  .slider-left, .slider-right {
+
   }
 }
 
@@ -184,6 +214,7 @@ ul {
     padding-top: 2rem;
     padding-bottom: 2rem;
     
+    
     p {
       font-size: 0.875rem;
       text-transform: uppercase;
@@ -191,6 +222,17 @@ ul {
       color: $black;
       line-height: 0;
       font-weight: 600;
+    }
+  }
+
+  .shop-btn:hover {
+    cursor: pointer;
+    p {
+      color: $dark-gray;
+    }
+
+    svg {
+      fill: $dark-gray;
     }
   }
 }

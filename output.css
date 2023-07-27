@@ -102,9 +102,27 @@ nav div {
 ul {
   display: flex;
   color: hsl(0, 0%, 0%);
+  position: relative;
   gap: 1rem;
   text-transform: lowercase;
   list-style: none;
+}
+
+li {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+li:hover:before {
+  align-self: center;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  border-bottom: 2px solid white;
+  width: 16px;
 }
 
 .brand {
@@ -126,7 +144,6 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
   background-color: hsl(0, 0%, 0%);
   width: 112px;
   height: 56px;
@@ -134,13 +151,20 @@ ul {
   right: 0;
 }
 .slider-arrows button {
+  height: 100%;
+  width: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: transparent;
   border: none;
   padding: 0;
   margin: 0;
+  cursor: pointer;
 }
-
+.slider-arrows button:hover {
+  background-color: hsl(0, 0%, 27%);
+}
 .slide {
   padding: 2rem;
 }
@@ -171,6 +195,15 @@ ul {
   color: hsl(0, 0%, 0%);
   line-height: 0;
   font-weight: 600;
+}
+.slide .shop-btn:hover {
+  cursor: pointer;
+}
+.slide .shop-btn:hover p {
+  color: hsl(0, 0%, 63%);
+}
+.slide .shop-btn:hover svg {
+  fill: hsl(0, 0%, 63%);
 }
 
 .about div {
